@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjord+One&display=swap');
+
+
+
+/* set html full width  */
+/* start */
+html {
+  width: 100%;
+  height: 100%;
+  display: table;
+  background-color: #E9E6D7;
+}
+
+body {
+  width: 100%;
+  display: table-cell;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+/* end */
+
+
+
+.header{
+  padding-top: 2%;
+  width: 100%;
+  height: 80px;
+  background-color: #E9E6D7;
+  display: flex;
+  
+}
+
+.logo-container{
+  display: flex;
+}
+
+img {
+  margin-top: 2%;
+  width: 38px;
+  height: 27px;
+
+}
+.logo-container p {
+  margin-top: 2%;
+  padding: 2px;
+  color: #42929D;
+  font-size: 18px;
+  font-family: 'Fjord One', serif;
+}
+
+.search-container {
+  float: right;
+  margin-left: 80%;
+}
+
+.search-container input{
+  border: 2px solid #42929D;
+  background-color: #E9E6D7;
+  padding: 10px;
+  border-radius: 5px;
+}
+

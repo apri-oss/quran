@@ -36,3 +36,41 @@
     transform: rotate(360deg);
   }
 }
+
+
+* {
+  box-sizing: border-box;
+}
+
+.row{
+  display: flex;
+}
+
+/* Create three equal columns that floats next to each other */
+.column-left {
+  width: 5%; 
+  background-color: #E9E6D7;
+}
+
+
+
+.column-center {
+  width: 90%; 
+  background-color: #E9E6D7;
+}
+.column-right {
+  width: 5%; 
+  background-color: #E9E6D7;
+}
+
+
+hr{
+  color: #42929D;
+}
+.second-line{
+  color: #42929D;
+  margin-top: -0.5%;
+}
+
+
+

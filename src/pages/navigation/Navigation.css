@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjord+One&display=swap');
+
+
+.navigation-header li {
+  float: left;  
+  padding-left: 20px;
+  list-style: none;
+}
+
+.navigation-header  li a{
+  text-decoration: none;  
+  color: #42929D;
+  font-size: 16px;
+  font-family: 'Fjord One', serif;
+
+}
+
+.navigation-header  li a .active{
+  color: #0D8292;
+  font-weight: bolder;
+  font-size: 16px;
+  font-family: 'Fjord One', serif;
+}
