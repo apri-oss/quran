@@ -107,11 +107,12 @@
 
 .card-warpper:hover{
   background-color: #d0dadc;
+  -webkit-transform: scale(1.08);
+  transform: scale(1.08);
+  cursor: pointer;
 }
 
 
-
-/* CSS */
 #btn-show-more {
   background-color: #FFB91B;
   border: 1px solid #FFB91B;
@@ -131,4 +132,87 @@
   position: absolute;
 }
 
+#btn-show-more:hover {
+  -webkit-transform: scale(1.08);
+  transform: scale(1.08);
+  cursor: pointer;
+}
 
+/* untuk responsive */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+  .card-warpper{
+    display: inline-table;
+    width: 85%;
+    margin-left: 28px;
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    height: 100px;
+    padding: 10px;
+    align-items:center;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #FFFF ;
+    position:relative;
+  }
+
+  #btn-show-more {
+    background-color: #FFB91B;
+    border: 1px solid #FFB91B;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+    box-sizing: border-box;
+    color: #5a5959;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+    outline: 0;
+    padding: 10px 25px;
+    text-align: center;
+    margin-left: -54%;
+    margin-top: 30%;
+    position: absolute;
+  }
+  
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {
+
+  .card-warpper{
+    display: inline-table;
+    width: 85%;
+    margin-left: 53px;
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    height: 100px;
+    padding: 10px;
+    align-items:center;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #FFFF ;
+    position:relative;
+  }
+
+  #btn-show-more {
+    background-color: #FFB91B;
+    border: 1px solid #FFB91B;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+    box-sizing: border-box;
+    color: #5a5959;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+    outline: 0;
+    padding: 10px 25px;
+    text-align: center;
+    margin-left: -47%;
+    margin-top: 16%;
+    position: absolute;
+  }
+  
+} */

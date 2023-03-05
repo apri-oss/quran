@@ -19,6 +19,13 @@
 
 }
 
+.murotal-card-audio:hover {
+  background-color: #c8caca;
+  -webkit-transform: scale(1.003);
+  transform: scale(1.003);
+  cursor: pointer;
+}
+
 .murotal-btn-play-audio{
   background-color: #42929D;
   border-radius: 50%;

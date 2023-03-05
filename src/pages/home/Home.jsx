@@ -15,14 +15,6 @@ const Home = () =>{
           <p className="text-header">QURAN</p>
         </div>
 
-
-        <div class="search-container">
-          <form action="/action_page.php">
-            <input type="text" placeholder="Search.." name="search"></input>
-          </form>
-        </div>
-
-
       </div>
     </div>
     

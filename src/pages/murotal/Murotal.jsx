@@ -2,7 +2,6 @@
 
 import React, {Fragment, useEffect, useState, useRef} from 'react';
 import './Murotal.css';
-import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import playButtonlogo from '../../assets/btn-play-icon.png';
 import pauseButtonlogo from '../../assets/btn-pause-icon.png';
@@ -76,7 +75,7 @@ const Murotal = () =>{
               <div className="murotal-card-audio" > 
                 <div className="murotal-btn-play-audio" onClick={()=>togglePlay(quran.audio) }>
 
-                  {(isPlaying === true) && (currentSong == quran.audio) ?
+                  {(isPlaying === true) && (currentSong === quran.audio) ?
                     <img className="murotal-img-play-btn" src={pauseButtonlogo} alt=""/> :
                     <img className="murotal-img-play-btn" src={playButtonlogo} alt=""/> 
                   }
