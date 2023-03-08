@@ -69,7 +69,7 @@ const Surat = () =>{
         <div className="surat-desciption-surat">   
           <p className="surat-nama-surat">{state.name} </p>
           <p className="surat-arti-surat">{state.translationId} </p>
-          <p className="surat-tempat-surat">{state.typeId} </p>
+          <p className="surat-tempat-surat">{state.typeId} </p> 
         </div>        
         {
           stateAyat.map(quran =>{ 
