@@ -37,6 +37,10 @@ html, body {
   display: flex;
 }
 
+.logo-container:hover{
+  cursor: pointer;
+}
+
 img {
   margin-top: 2%;
   width: 38px;

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fjord+One&display=swap');
 
-.card-warpper{
+.surat-list-card-warpper{
   display: inline-table;
   width: 22%;
   margin-left: 38px;
@@ -17,18 +17,18 @@
 }
 
 
-.card-surat-wrapper{
+.surat-list-card-surat-wrapper{
   display: flex;
   flex-direction: row;
   width: 100%;
 }
 
-.nomor-surat-wrapper{
+.surat-list-nomor-surat-wrapper{
   align-items:center;
   width: 20%;
 }
 
-.box-number-wrapper{
+.surat-list-box-number-wrapper{
   height: 45px;
   box-sizing: border-box;
   width: 45px;
@@ -37,7 +37,7 @@
   background-color: #E9E6D7;
 }
 
-.box-number-wrapper p{
+.surat-list-box-number-wrapper p{
   color: #010506;
   position: absolute;
   padding-left: .3%;
@@ -48,12 +48,12 @@
 }
 
 
-.nama-surat-latin-wrapper{
+.surat-list-nama-surat-latin-wrapper{
   width: 55%;
 }
 
 
-.nama-surat-latin-wrapper .p-nama{
+.surat-list-nama-surat-latin-wrapper .surat-list-p-nama{
   color: #0D8292;
   position: absolute;
   padding-left: .3%;
@@ -64,7 +64,7 @@
 
 }
 
-.nama-surat-latin-wrapper .p-arti{
+.surat-list-nama-surat-latin-wrapper .surat-list-p-arti{
   padding-top: 15px;
   color: #5a5959;
   position: absolute;
@@ -76,12 +76,12 @@
 
 }
 
-.nama-surat-arab-wrapper{
+.surat-list-nama-surat-arab-wrapper{
   padding: 5px;
   width: 25%;
 }
 
-.nama-surat-arab-wrapper .p-nama-arab{
+.surat-list-nama-surat-arab-wrapper .surat-list-p-nama-arab{
   color: #0D8292;
   margin-top: -1px;
   position: absolute;
@@ -93,7 +93,7 @@
 
 }
 
-.nama-surat-arab-wrapper .p-ayat{
+.surat-list-nama-surat-arab-wrapper .surat-list-p-ayat{
   padding-top: 1px;
   color: #5a5959;
   position: absolute;
@@ -105,7 +105,7 @@
 
 }
 
-.card-warpper:hover{
+.surat-list-card-warpper:hover{
   background-color: #d0dadc;
   -webkit-transform: scale(1.08);
   transform: scale(1.08);
@@ -113,7 +113,7 @@
 }
 
 
-#btn-show-more {
+#surat-list-btn-show-more {
   background-color: #FFB91B;
   border: 1px solid #FFB91B;
   border-radius: 4px;
@@ -132,87 +132,9 @@
   position: absolute;
 }
 
-#btn-show-more:hover {
+#surat-list-btn-show-more:hover {
   -webkit-transform: scale(1.08);
   transform: scale(1.08);
   cursor: pointer;
 }
 
-/* untuk responsive */
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-
-  .card-warpper{
-    display: inline-table;
-    width: 85%;
-    margin-left: 28px;
-    box-sizing: border-box;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    height: 100px;
-    padding: 10px;
-    align-items:center;
-    margin-top: 10px;
-    border-radius: 5px;
-    background-color: #FFFF ;
-    position:relative;
-  }
-
-  #btn-show-more {
-    background-color: #FFB91B;
-    border: 1px solid #FFB91B;
-    border-radius: 4px;
-    box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
-    box-sizing: border-box;
-    color: #5a5959;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 400;
-    outline: none;
-    outline: 0;
-    padding: 10px 25px;
-    text-align: center;
-    margin-left: -54%;
-    margin-top: 30%;
-    position: absolute;
-  }
-  
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-/* @media only screen and (min-width: 600px) {
-
-  .card-warpper{
-    display: inline-table;
-    width: 85%;
-    margin-left: 53px;
-    box-sizing: border-box;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    height: 100px;
-    padding: 10px;
-    align-items:center;
-    margin-top: 10px;
-    border-radius: 5px;
-    background-color: #FFFF ;
-    position:relative;
-  }
-
-  #btn-show-more {
-    background-color: #FFB91B;
-    border: 1px solid #FFB91B;
-    border-radius: 4px;
-    box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
-    box-sizing: border-box;
-    color: #5a5959;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 400;
-    outline: none;
-    outline: 0;
-    padding: 10px 25px;
-    text-align: center;
-    margin-left: -47%;
-    margin-top: 16%;
-    position: absolute;
-  }
-  
-} */

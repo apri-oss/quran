@@ -59,11 +59,7 @@ const Murotal = () =>{
 
 
   return(
-    
-
-
-    <Fragment> 
-      
+    <Fragment>       
       <Helmet>
         <title>Murotal</title>
       </Helmet>
@@ -72,8 +68,8 @@ const Murotal = () =>{
         {
           stateSurat.map(quran =>{ 
             return ( 
-              <div className="murotal-card-audio" > 
-                <div className="murotal-btn-play-audio" onClick={()=>togglePlay(quran.audio) }>
+              <div className="murotal-card-audio" onClick={()=>togglePlay(quran.audio) }> 
+                <div className="murotal-btn-play-audio">
 
                   {(isPlaying === true) && (currentSong === quran.audio) ?
                     <img className="murotal-img-play-btn" src={pauseButtonlogo} alt=""/> :

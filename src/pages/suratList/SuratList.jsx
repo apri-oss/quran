@@ -37,7 +37,7 @@ class SuratList extends Component{
   }
 
   componentDidUpdate(){
-    let showmorebutton = document.getElementById("btn-show-more");
+    let showmorebutton = document.getElementById("surat-list-btn-show-more");
     if (this.state.is_showMore === true){
       showmorebutton.style.display = "none";
     }
@@ -61,26 +61,26 @@ class SuratList extends Component{
           this.state.data_quran.slice(0, this.state.max_number).map(quran =>{
             return(
               
-              <div className="card-warpper" onClick ={() => this.handleDetail(quran.number)}>
+              <div className="surat-list-card-warpper" onClick ={() => this.handleDetail(quran.number)}>
                 
-                <div className="card-surat-wrapper">
+                <div className="surat-list-card-surat-wrapper">
                   
-                  <div className="nomor-surat-wrapper">
-                    <div className="box-number-wrapper">
+                  <div className="surat-list-nomor-surat-wrapper">
+                    <div className="surat-list-box-number-wrapper">
                       <p>{quran.number}</p>
                     </div>
                   </div>
 
-                  <div className="nama-surat-latin-wrapper">
-                    <p className="p-nama">{quran.name}</p>
+                  <div className="surat-list-nama-surat-latin-wrapper">
+                    <p className="surat-list-p-nama">{quran.name}</p>
                     <br />
-                    <p className="p-arti">{quran.translationId}</p>
+                    <p className="surat-list-p-arti">{quran.translationId}</p>
                   </div>
 
-                  <div className="nama-surat-arab-wrapper">
-                    <p className="p-nama-arab" >{quran.asma}</p>
+                  <div className="surat-list-nama-surat-arab-wrapper">
+                    <p className="surat-list-p-nama-arab" >{quran.asma}</p>
                     <br />
-                    <p className="p-ayat" >{quran.numberOfAyahs} ayat</p>
+                    <p className="surat-list-p-ayat" >{quran.numberOfAyahs} ayat</p>
                   </div>
                   
                 </div>
@@ -89,7 +89,7 @@ class SuratList extends Component{
           })
           
         }
-        <button id="btn-show-more" onClick ={() => this.ShowMore(true) }>Show More</button> 
+        <button id="surat-list-btn-show-more" onClick ={() => this.ShowMore(true) }>Show More</button> 
 
 
       </Fragment>
