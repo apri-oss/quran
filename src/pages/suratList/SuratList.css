@@ -138,3 +138,85 @@
   cursor: pointer;
 }
 
+
+/* Responsive Media */
+/* On screens that are 1500px or less, set the background color to olive */
+@media screen and (max-width: 1500px) {
+ 
+  .surat-list-card-warpper{
+    display: inline-table;
+    width: 100%;
+    margin-left: 0;
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    height: 100px;
+    padding: 10px;
+    align-items:center;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: #FFFF ;
+    position:relative;
+  
+  }
+
+  #surat-list-btn-show-more {
+    background-color: #FFB91B;
+    border: 1px solid #FFB91B;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+    box-sizing: border-box;
+    color: #5a5959;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+    outline: 0;
+    padding: 10px 25px;
+    text-align: center;
+    margin-left: -90%;
+    margin-top: 135px;
+    position: absolute;
+    width: 90%;
+
+
+  }
+}
+  
+/* On screens that are 1500px or more, set the background color to blue */
+@media screen and (min-width: 1501px) {
+
+  .surat-list-card-warpper{
+    display: inline-table;
+    width: 22%;
+    margin-left: 38px;
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    height: 100px;
+    padding: 10px;
+    align-items:center;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: #FFFF ;
+    position:relative;
+  
+  }
+
+  #surat-list-btn-show-more {
+    background-color: #FFB91B;
+    border: 1px solid #FFB91B;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+    box-sizing: border-box;
+    color: #5a5959;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+    outline: 0;
+    padding: 10px 25px;
+    text-align: center;
+    margin-left: -46%;
+    margin-top: 8%;
+    position: absolute;
+  }
+}
