@@ -151,7 +151,7 @@
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     height: 100px;
     padding: 10px;
-    align-items:center;
+    align-items:right;
     margin-top: 20px;
     border-radius: 5px;
     background-color: #FFFF ;
@@ -172,11 +172,11 @@
     outline: none;
     outline: 0;
     padding: 10px 25px;
+    margin-top: 15px;
     text-align: center;
-    margin-left: -90%;
-    margin-top: 135px;
-    position: absolute;
-    width: 90%;
+    margin-left: 0;
+    position: relative;
+    width: 100%;
 
 
   }
