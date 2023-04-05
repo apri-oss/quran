@@ -4,6 +4,8 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import playButtonlogo from '../../assets/btn-play-icon.png';
 import pauseButtonlogo from '../../assets/btn-pause-icon.png';
+import Spinner from '../../spinner/Spinner';
+
 
 import { Helmet } from 'react-helmet';
 
@@ -14,6 +16,8 @@ const Surat = () =>{
   const nomor_surat = params.nomor;
 
   const [isPlaying, setPlaying] = useState(false);
+  const [isLoading, setLoading] = useState(true);
+
   const [currentSong, setCurrentSong] = useState(null);
   const audio = useRef(null);
 
@@ -45,6 +49,8 @@ const Surat = () =>{
     .then((result) =>{
       setStateAyat(result.data.ayahs);
       setState(result.data);
+      setLoading(false);
+
     })
   }
 
@@ -66,11 +72,13 @@ const Surat = () =>{
         <title>{"Surat " + state.name}</title>
       </Helmet>
       <div>
-        <div className="surat-desciption-surat">   
-          <p className="surat-nama-surat">{state.name} </p>
-          <p className="surat-arti-surat">{state.translationId} </p>
-          <p className="surat-tempat-surat">{state.typeId} </p> 
-        </div>        
+        { isLoading ? (<Spinner/>) : 
+          <div className="surat-desciption-surat">   
+            <p className="surat-nama-surat">{state.name} </p>
+            <p className="surat-arti-surat">{state.translationId} </p>
+            <p className="surat-tempat-surat">{state.typeId} </p> 
+          </div>     
+        }   
         {
           stateAyat.map(quran =>{ 
             return ( 

@@ -2,16 +2,15 @@ import React, {Component, Fragment} from 'react';
 import axios from 'axios';
 import './SuratList.css';
 import { Helmet } from 'react-helmet';
-
-
-
+import Spinner from '../../spinner/Spinner';
 
 class SuratList extends Component{
 
   state = {
     data_quran:[],
     max_number: 20,
-    is_showMore: false
+    is_showMore: false,
+    is_loading: true
 
   }
 
@@ -20,7 +19,8 @@ class SuratList extends Component{
     .then((result) =>{     
       console.log(result.data.data)
       this.setState({
-        data_quran: result.data.data
+        data_quran: result.data.data,
+        is_loading: false
       })
     })
   }
@@ -89,7 +89,11 @@ class SuratList extends Component{
           })
           
         }
-        <button id="surat-list-btn-show-more" onClick ={() => this.ShowMore(true) }>Show More</button> 
+        {this.state.is_loading ? (<Spinner/>) : 
+
+          <button id="surat-list-btn-show-more" onClick ={() => this.ShowMore(true) }>Show More</button> 
+        }
+
 
 
       </Fragment>

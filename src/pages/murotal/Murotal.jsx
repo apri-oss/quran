@@ -8,10 +8,13 @@ import pauseButtonlogo from '../../assets/btn-pause-icon.png';
 
 import { Helmet } from 'react-helmet';
 
+import Spinner from '../../spinner/Spinner';
+
+
 const Murotal = () =>{
 
   const [stateSurat, setStateSurat] = useState([]);
-
+  const [isLoading, setLoading] = useState(true);
   const [isPlaying, setPlaying] = useState(false);
   const [currentSong, setCurrentSong] = useState(null);
   const audio = useRef(null);
@@ -22,6 +25,8 @@ const Murotal = () =>{
     .then((result) =>{
       console.log(result.data)
       setStateSurat(result.data);
+      setLoading(false);
+
     })
   }
 
@@ -66,6 +71,7 @@ const Murotal = () =>{
       <div>   
             
         {
+          isLoading ? (<Spinner/>) : 
           stateSurat.map(quran =>{ 
             return ( 
               <div className="murotal-card-audio" onClick={()=>togglePlay(quran.audio) }> 
