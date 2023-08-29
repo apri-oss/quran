@@ -44,15 +44,26 @@ const Surat = () =>{
     
   };  
 
+  // const fetchData = () =>{
+  //   axios.get(`https://quranapi.idn.sch.id/surah/${nomor_surat}`)
+  //   .then((result) =>{
+  //     setStateAyat(result.data.ayahs);
+  //     setState(result.data);
+  //     setLoading(false);
+
+  //   })
+  // }
+
   const fetchData = () =>{
-    axios.get(`https://quranapi.idn.sch.id/surah/${nomor_surat}`)
+    axios.get(`https://equran.id/api/v2/surat/${nomor_surat}`)
     .then((result) =>{
-      setStateAyat(result.data.ayahs);
-      setState(result.data);
+      setStateAyat(result.data.data.ayat);
+      setState(result.data.data);
       setLoading(false);
 
     })
   }
+
 
 
   useEffect(() => {
@@ -69,28 +80,29 @@ const Surat = () =>{
   return(
     <Fragment> 
       <Helmet>
-        <title>{"Surat " + state.name}</title>
+        <title>{"Surat " + state.namaLatin}</title>
       </Helmet>
       <div>
         { isLoading ? (<Spinner/>) : 
           <div className="surat-desciption-surat">   
-            <p className="surat-nama-surat">{state.name} </p>
-            <p className="surat-arti-surat">{state.translationId} </p>
-            <p className="surat-tempat-surat">{state.typeId} </p> 
+            <p className="surat-nama-surat">{state.nama} </p>
+            <p className="surat-arti-surat">{state.namaLatin} </p>
+            <p className="surat-tempat-surat">{state.tempatTurun} </p> 
           </div>     
         }   
         {
           stateAyat.map(quran =>{ 
-            return ( 
+            return (             
               
               <div className="surat-header-surat" >
                 <div className="surat-header-surat"></div>
                 <div className="surat-content-surat">    
                   <div className="surat-card-audio" >
-                    <p className="surat-ayat-surat">{quran.verseId}</p>    
-                    <div className="surat-btn-play-audio" onClick={()=>togglePlay(quran.audio) }>
+                    <p className="surat-ayat-surat">{quran.nomorAyat}</p>    
+                    <div className="surat-btn-play-audio" onClick={()=>togglePlay(quran.audio['01']) }>
                   
-                      {(isPlaying === true) && (currentSong === quran.audio) ?
+                      
+                      {(isPlaying === true) && (currentSong === quran.audio['01']) ?
                         <img className="surat-img-play-btn" id="btn-play" src={pauseButtonlogo} alt=""/> :
                         <img className="surat-img-play-btn" src={playButtonlogo} alt=""/> 
                       }
@@ -98,9 +110,9 @@ const Surat = () =>{
 
                   </div>
                   <br />
-                  <p className="surat-arabic-font-class">{quran.ayahText}</p>
-                  <p className="surat-tafsir-font-surat">{quran.readText}</p>
-                  <p className="surat-arti-font-surat">{quran.indoText}</p> 
+                  <p className="surat-arabic-font-class">{quran.teksArab}</p>
+                  <p className="surat-tafsir-font-surat">{quran.teksLatin}</p>
+                  <p className="surat-arti-font-surat">{quran.teksIndonesia}</p> 
                 </div>   
 
               </div>   

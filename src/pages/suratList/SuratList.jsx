@@ -14,12 +14,14 @@ class SuratList extends Component{
 
   }
 
+
   getPostApi = () => {
-    axios.get('https://quranapi.idn.sch.id/surah')
+    //axios.get('https://quranapi.idn.sch.id/surah')
+    axios.get('https://equran.id/api/surat')
     .then((result) =>{     
-      console.log(result.data.data)
+      console.log(result.data)
       this.setState({
-        data_quran: result.data.data,
+        data_quran: result.data,
         is_loading: false
       })
     })
@@ -61,26 +63,26 @@ class SuratList extends Component{
           this.state.data_quran.slice(0, this.state.max_number).map(quran =>{
             return(
               
-              <div className="surat-list-card-warpper" onClick ={() => this.handleDetail(quran.number)}>
+              <div className="surat-list-card-warpper" onClick ={() => this.handleDetail(quran.nomor)}>
                 
                 <div className="surat-list-card-surat-wrapper">
                   
                   <div className="surat-list-nomor-surat-wrapper">
                     <div className="surat-list-box-number-wrapper">
-                      <p>{quran.number}</p>
+                      <p>{quran.nomor}</p>
                     </div>
                   </div>
 
                   <div className="surat-list-nama-surat-latin-wrapper">
-                    <p className="surat-list-p-nama">{quran.name}</p>
+                    <p className="surat-list-p-nama">{quran.nama_latin}</p>
                     <br />
-                    <p className="surat-list-p-arti">{quran.translationId}</p>
+                    <p className="surat-list-p-arti">{quran.arti}</p>
                   </div>
 
                   <div className="surat-list-nama-surat-arab-wrapper">
-                    <p className="surat-list-p-nama-arab" >{quran.asma}</p>
+                    <p className="surat-list-p-nama-arab" >{quran.nama}</p>
                     <br />
-                    <p className="surat-list-p-ayat" >{quran.numberOfAyahs} ayat</p>
+                    <p className="surat-list-p-ayat" >{quran.jumlah_ayat} ayat</p>
                   </div>
                   
                 </div>
